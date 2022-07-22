@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+<!--Same CSS as index.html -->
+<meta charset="utf-8" />
+<title>Event Tickets Order Form</title>
+<link rel="stylesheet" type="text/css" href="styles/normalize.css">
+<link rel="stylesheet" type="text/css" href="styles/main.css"> 
+
+</head>
+
+<body>
+<div id="frame">
+			<header>
+			<img src="images/ornament-logo.png" alt="New Year Central Logo" style="width: 400px;">
+			<div id="header-line-1">New Year Central</div>
+			<div id="header-line-2">For the child in all of us!</div>
+			</header>
+
+<!-- subheaders -->
+<nav id="nav_menu">
+			<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about_us.html">About Us</a></li>
+			<li><a href="products.html">Our Products</a></li>
+			<li><a href="tickets_order_form.html" class="current">Event Tickets</a></li>
+			<li><a href="contact_us.html">Contact Us</a></li>
+			</ul>
+</nav>
+
+<!-- sidebar menu -->
+		<aside>
+					<div class="chick-fill-A">Products of The Week...</div>
+					
+					<ul>				
+					<li><a href="assets/products/berry-garland.html">Natural Holly Berry Garland, 5f - $74.99</a>
+					</li>
+					<li><a href="assets/products/artificial-red-berry-garland.html">Artificial Red Berry and White Edge Holly Leaf Christmas Garland, 5.5f - $38.99</a>
+					</li>
+					<li><a href="assets/products/christmas-berries-stems.html">Christmas Berries Red Stems Evergreen Pine Branches, 8pcs - $15.99</a>
+					</li>
+					</ul>
+		</aside>
+
+		<main>
+		<h1>Order Event Tickets</h1>
+		
+		<!-- Client-slide data form -->
+		
+		<form name="order_form" method="post" action="place_order.html">
+		<fieldset>
+		<legend>Member Information</legend>
+
+					<table>
+							<tbody>
+							<tr>
+							<td>
+							     <label for="email">E-Mail:</label>
+							</td>
+							<td>
+							     <input type="email" id="email" name="email" required autofocus>
+							</td>
+							</tr>
+							<tr><td><br></td></tr>
+							<tr>
+							<td>
+							     <label for="fname">First name:</label>
+							</td>
+							<td>
+							    <input type="text" id="fname" name="fname" required>
+							</td>
+							</tr>
+							<tr><td><br></td></tr>
+							<tr>
+							<td>
+							    <label for="lname">Last name:</label>
+							</td>
+							<td>
+							    <input type="text" id="lname" name="lname" required>
+							</td>
+							</tr>
+							    <tr><td><br></td></tr>
+							<tr>
+							<td>
+							    <label for="address">Address:</label>
+							</td>
+							<td>
+							    <input type="text" id="address" name="address">
+							</td>
+							</tr>
+							<tr><td><br></td></tr>
+							<tr>
+							<td>
+							     <label for="city">City:</label>
+							</td>
+							<td>
+							     <input type="text" id="city" name="city" required>
+							</td>
+							</tr>
+							<tr><td><br></td></tr>
+							<tr>
+							<td>
+							     <label for="province">Province:</label>
+							</td>
+							<td>
+							      <input type="text" id="province" name="province"
+							placeholder="2-character code" pattern="[A-Za-z]{2}"
+							title="2-character code" required>
+							</td>
+							</tr>
+							<tr><td><br></td></tr>
+							<tr>
+							<td>
+							     <label for="postalcode">Postal Code:</label>
+							</td>
+								<td>
+								<input type="text" id="postalcode" name="postalcode"
+								placeholder="6 characters" pattern="[A-Za-z0-9]{6}"
+								title="6 characters" required>
+								</td>
+					</tr>
+					<tr><td><br></td></tr>
+					<tr>
+					<td>
+					<label for="phnum">Phone Number:</label>
+					</td>
+					<td>
+					<input type="text" id="phnum" name="phnum"
+					placeholder="999-999-999" pattern="[0-9]{3}-[0-9]{9}-[0-9]{3}"
+					title="999-999-999">
+					</td>
+					</tr>
+					</tbody>
+			</table>
+<br>
+</fieldset>
+<fieldset>
+<!--Dropdown menu -->
+			<legend>Ordering Information</legend>
+<table>
+<tbody>
+<tr>
+<td><label for="event">Event:</label></td>
+<td>
+			<select name="event" id="event">
+			<option value="cdecorcontest">Cookie Decoration Contest</option>
+			<option value="tdecorcontest">Tree Decoration Contest</option>
+			<option value="gift">Gift of Light Ride-Along</option>
+			<option value="santa">Breakfast with Santa</option>
+			</select> 
+</td>
+</tr>
+<tr><td><br></td></tr>
+<tr>
+<td><label for="type">Order Type:</label></td>
+<td>
+			<select name="twisk" id="twisk">
+			<option value="mpackage">Member Package</option>
+			<option value="dpackage">Donor Package</option>
+			<option value="sticket">Single Tickets</option>
+			</select> 
+</td>
+</tr>
+<tr><td><br></td></tr>
+    <tr>
+	<!--id specifically for number of tickets -->
+			<td><label for="ticket">Number of Tickets:</label></td>
+			<td>
+			<input type="number" id="simcard" name="simcard"
+			placeholder="Number of single tickets">
+			</td>
+    </tr>
+</tbody>
+</table>
+</fieldset>
+			<fieldset>
+			<!--Payment form -->
+			<legend>Payment Method</legend>
+			<input class="rightt" type="radio" id="bill" name="payment_method" value="BILL">
+			<label for="bill">Bill Me</label>
+			<input type="radio" id="ccard" name="payment_method" value="CCARD">
+			<label for="ccard">Credit Card</label> 
+			<br>
+			</fieldset>
+<fieldset>
+<!-- Credit card form -->
+<legend>Credit Card Information</legend>
+<table>
+<tbody>
+<tr>
+<td><label for="type">Card Type:</label></td>
+<td>
+<select name="ctype" id="ctype">
+
+<option value="visa">Visa</option>
+<option value="mcard">Master Card</option>
+<option value="discover">Discover</option>
+</select> 
+</td>
+
+</tr>
+<!-- accepted pattern for client data -->
+		<tr><td><br></td></tr>
+		<tr>
+		<td><label for="cnum">Card Number:</label></td>
+		<td>
+		<input type="number" id="cnum" name="cnum"
+		placeholder="16 digits" pattern="[0-9]{16}"
+		title="16 digits" required>
+		</td>
+		</tr>
+		<tr><td><br></td></tr>
+		<tr>
+		<td><label for="date">Order Type:</label></td>
+		<td>
+
+
+<select name="month" id="month" class="mon">
+				<option value="jan">January</option>
+				
+				<option value="feb">February</option>
+				
+				<option value="mar">March</option>
+				
+				<option value="apr">April</option>
+				
+				<option value="may">May</option>
+				
+				<option value="jun">June</option>
+				
+				<option value="jul">July</option>
+				
+				<option value="aug">August</option>
+				
+				<option value="sep">September</option>
+				
+				<option value="oct">October</option>
+				
+				<option value="nov">November</option>
+				
+				<option value="dec">December</option>
+		</select>
+		
+		<select name="year" id="year" class="year">
+				<option value="2021">2021</option>
+				
+				<option value="2022">2022</option>
+				
+				<option value="2023">2023</option>
+				
+				<option value="2024">2024</option>
+				
+				<option value="2025">2025</option>
+				
+				<option value="2026">2026</option>
+				
+				<option value="2027">2027</option>
+		</select> 
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</fieldset>
+<fieldset>
+<!-- Submit order -->
+<legend>Submit Your Order</legend>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset Fields">
+</fieldset>
+
+</form>
+</main>
+
+<footer>
+<p>&copy; 2022 New Year Central. Created by Victoria Gunn.</p>
+</footer>
+</div>
+</body>
+</html>
